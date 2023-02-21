@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Û  window?.backgroundColor = .orange
        // window?.rootViewController = LoginViewController()
         window?.rootViewController = OnboardingContainerViewController()
+       
+        //window?.rootViewController = OnboardingViewController(heroImageName: "delorean", titleText: "das wird der Text")
         return true
     }
     
