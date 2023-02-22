@@ -7,11 +7,12 @@
 
 import UIKit
 
+let appColor: UIColor = .systemTeal
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
+    let mainViewController = MainViewController()
   //  var hasOnboarded = false
     
     let loginViewController = LoginViewController()
@@ -23,12 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
         //Û  window?.backgroundColor = .orange
-        window?.rootViewController = loginViewController
+     //   window?.rootViewController = loginViewController
+        window?.rootViewController = mainViewController
         loginViewController.delegate = self
         dummyViewController.logoutDlegate = self
         // window?.rootViewController = onboardingContainerViewController
         onboardingContainerViewController.delegate = self
         //window?.rootViewController = OnboardingViewController(heroImageName: "delorean", titleText: "das wird der Text")
+        mainViewController.selectedIndex = 1
         return true
     }
     
