@@ -25,7 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .systemBackground
         //Û  window?.backgroundColor = .orange
      //   window?.rootViewController = loginViewController
-        window?.rootViewController = mainViewController
+      //  window?.rootViewController = mainViewController
+        window?.rootViewController = AccountSummaryViewController()
+
         loginViewController.delegate = self
         dummyViewController.logoutDlegate = self
         // window?.rootViewController = onboardingContainerViewController

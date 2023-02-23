@@ -18,6 +18,7 @@
 		3A788F7929A680EF00F95D19 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A788F7829A680EF00F95D19 /* LocalState.swift */; };
 		3A788F7B29A6911C00F95D19 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A788F7A29A6911C00F95D19 /* UIViewController+Utils.swift */; };
 		3A788F7D29A6925500F95D19 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A788F7C29A6925500F95D19 /* MainViewController.swift */; };
+		3A788F8029A7A28F00F95D19 /* AccountSummaryViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A788F7F29A7A28F00F95D19 /* AccountSummaryViewControler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3A788F7829A680EF00F95D19 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		3A788F7A29A6911C00F95D19 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		3A788F7C29A6925500F95D19 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3A788F7F29A7A28F00F95D19 /* AccountSummaryViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +69,12 @@
 			isa = PBXGroup;
 			children = (
 				3A05392B299BFF5500A43932 /* AppDelegate.swift */,
+				3A788F7C29A6925500F95D19 /* MainViewController.swift */,
 				3A053940299CF7E500A43932 /* Login */,
 				3A788F6E29A5212D00F95D19 /* Onboarding */,
+				3A788F7E29A7A1AD00F95D19 /* AccountSummary */,
 				3A788F7729A680CA00F95D19 /* Utils */,
 				3A05393F299CF73000A43932 /* Files */,
-				3A788F7C29A6925500F95D19 /* MainViewController.swift */,
 			);
 			path = banky;
 			sourceTree = "<group>";
@@ -112,6 +115,14 @@
 				3A788F7A29A6911C00F95D19 /* UIViewController+Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3A788F7E29A7A1AD00F95D19 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				3A788F7F29A7A28F00F95D19 /* AccountSummaryViewControler.swift */,
+			);
+			path = AccountSummary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A788F8029A7A28F00F95D19 /* AccountSummaryViewControler.swift in Sources */,
 				3A788F7B29A6911C00F95D19 /* UIViewController+Utils.swift in Sources */,
 				3A788F7629A672CE00F95D19 /* DummyViewController.swift in Sources */,
 				3A788F7929A680EF00F95D19 /* LocalState.swift in Sources */,
