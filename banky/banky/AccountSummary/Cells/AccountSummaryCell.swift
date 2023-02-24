@@ -19,12 +19,16 @@ class AccountSummaryCell :UITableViewCell {
     struct ViewModel {
         let accountType: AccountType
         let accountName: String
-      //  let balance: Decimal
+        let balance: Decimal
             
-//            var balanceAsAttributedString: NSAttributedString {
-//                return CurrencyFormatter().makeAttributedCurrency(balance)
-//            }
+           var balanceAsAttributedString: NSAttributedString {
+               return CurrencyFormatter().makeAttributedCurrency(balance)
+           }
     }
+    
+    
+    
+    
 
     let viewModel: ViewModel? = nil
     
@@ -78,7 +82,7 @@ extension AccountSummaryCell {
         balanceAmountLabel.translatesAutoresizingMaskIntoConstraints = false
         balanceAmountLabel.textAlignment = .right
        // balanceAmountLabel.text = "$929,466.63"
-        balanceAmountLabel.attributedText = makeFormattedBalance(dollars: "929,466", cents: "23")
+        balanceAmountLabel.attributedText = makeFormattedBalance(dollars: "XXX,XX6", cents: "xx23")
 
         balanceStackView.addArrangedSubview(balanceLabel)
         balanceStackView.addArrangedSubview(balanceAmountLabel)
@@ -136,6 +140,8 @@ extension AccountSummaryCell {
         
         typeLabel.text = vm.accountType.rawValue
         nameLabel.text = vm.accountName
+        //balanceLabel.attributedText = vm.balanceAsAttributedString
+        balanceAmountLabel.attributedText = vm.balanceAsAttributedString
         
         switch vm.accountType {
         case .Banking:
