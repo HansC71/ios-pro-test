@@ -24,7 +24,18 @@
 		3AE8B22429A7F5DD006DD833 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8B22329A7F5DD006DD833 /* AccountSummaryCell.swift */; };
 		3AE8B22629A8F8D2006DD833 /* DecimalUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8B22529A8F8D2006DD833 /* DecimalUtil.swift */; };
 		3AE8B22829A8F99B006DD833 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8B22729A8F99B006DD833 /* CurrencyFormatter.swift */; };
+		3AE8B23729A918BD006DD833 /* CurrencyFormaterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8B23629A918BD006DD833 /* CurrencyFormaterTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AE8B23129A91788006DD833 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A053920299BFF5500A43932 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A053927299BFF5500A43932;
+			remoteInfo = banky;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A053928299BFF5500A43932 /* banky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = banky.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,10 +57,19 @@
 		3AE8B22329A7F5DD006DD833 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		3AE8B22529A8F8D2006DD833 /* DecimalUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtil.swift; sourceTree = "<group>"; };
 		3AE8B22729A8F99B006DD833 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		3AE8B22D29A91788006DD833 /* bankyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bankyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE8B23629A918BD006DD833 /* CurrencyFormaterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormaterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3A053925299BFF5500A43932 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE8B22A29A91788006DD833 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				3A05392A299BFF5500A43932 /* banky */,
+				3AE8B22E29A91788006DD833 /* bankyUnitTests */,
 				3A053929299BFF5500A43932 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				3A053928299BFF5500A43932 /* banky.app */,
+				3AE8B22D29A91788006DD833 /* bankyUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +178,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		3AE8B22E29A91788006DD833 /* bankyUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				3AE8B23629A918BD006DD833 /* CurrencyFormaterTest.swift */,
+			);
+			path = bankyUnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,6 +206,24 @@
 			productReference = 3A053928299BFF5500A43932 /* banky.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3AE8B22C29A91788006DD833 /* bankyUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AE8B23329A91788006DD833 /* Build configuration list for PBXNativeTarget "bankyUnitTests" */;
+			buildPhases = (
+				3AE8B22929A91788006DD833 /* Sources */,
+				3AE8B22A29A91788006DD833 /* Frameworks */,
+				3AE8B22B29A91788006DD833 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AE8B23229A91788006DD833 /* PBXTargetDependency */,
+			);
+			name = bankyUnitTests;
+			productName = bankyUnitTests;
+			productReference = 3AE8B22D29A91788006DD833 /* bankyUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,6 +236,11 @@
 				TargetAttributes = {
 					3A053927299BFF5500A43932 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					3AE8B22C29A91788006DD833 = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+						TestTargetID = 3A053927299BFF5500A43932;
 					};
 				};
 			};
@@ -205,6 +258,7 @@
 			projectRoot = "";
 			targets = (
 				3A053927299BFF5500A43932 /* banky */,
+				3AE8B22C29A91788006DD833 /* bankyUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +271,13 @@
 				3A788F8429A7B28400F95D19 /* AccountSummaryHeaderView.xib in Resources */,
 				3A053938299BFF5700A43932 /* LaunchScreen.storyboard in Resources */,
 				3A053935299BFF5700A43932 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE8B22B29A91788006DD833 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +305,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AE8B22929A91788006DD833 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE8B23729A918BD006DD833 /* CurrencyFormaterTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AE8B23229A91788006DD833 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A053927299BFF5500A43932 /* banky */;
+			targetProxy = 3AE8B23129A91788006DD833 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3A053936299BFF5700A43932 /* LaunchScreen.storyboard */ = {
@@ -424,6 +501,53 @@
 			};
 			name = Release;
 		};
+		3AE8B23429A91788006DD833 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "hans-c.bankyUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/banky.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/banky";
+			};
+			name = Debug;
+		};
+		3AE8B23529A91788006DD833 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "hans-c.bankyUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/banky.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/banky";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -441,6 +565,15 @@
 			buildConfigurations = (
 				3A05393D299BFF5700A43932 /* Debug */,
 				3A05393E299BFF5700A43932 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AE8B23329A91788006DD833 /* Build configuration list for PBXNativeTarget "bankyUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AE8B23429A91788006DD833 /* Debug */,
+				3AE8B23529A91788006DD833 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

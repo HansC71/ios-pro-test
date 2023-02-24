@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let loginViewController = LoginViewController()
     let onboardingContainerViewController = OnboardingContainerViewController()
-    let dummyViewController = DummyViewController()
+   // let dummyViewController = DummyViewController()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -29,12 +29,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = AccountSummaryViewController()
 
         loginViewController.delegate = self
-        dummyViewController.logoutDlegate = self
+        //dummyViewController.logoutDlegate = self
         // window?.rootViewController = onboardingContainerViewController
         onboardingContainerViewController.delegate = self
+        //onboardingViewController.delegate = self
+        
         //window?.rootViewController = OnboardingViewController(heroImageName: "delorean", titleText: "das wird der Text")
-        mainViewController.selectedIndex = 1
-        return true
+        //mainViewController.selectedIndex = 1
+        
+     let vc = mainViewController
+     vc.setStatusBar()
+
+     UINavigationBar.appearance().isTranslucent = false
+     UINavigationBar.appearance().backgroundColor = appColor
+         
+     window?.rootViewController = vc
+         
+     return true
     }
     
 }
@@ -47,7 +58,7 @@ extension AppDelegate: LoginViewControllerDelegate {
     
     func didLogin() {
         if LocalState.hasOnboarded {
-            setRootViewController(dummyViewController)
+            setRootViewController(mainViewController)
         } else {
             setRootViewController(onboardingContainerViewController)
         }
@@ -60,7 +71,7 @@ extension AppDelegate: OnboardingViewControllerDelegate {
     func didFinishOnboarding() {
         print("im Onboarding delegate")
         LocalState.hasOnboarded = true
-        setRootViewController(dummyViewController)
+        setRootViewController(mainViewController)
         }
 }
 
